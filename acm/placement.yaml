@@ -1,0 +1,14 @@
+apiVersion: cluster.open-cluster-management.io/v1beta1
+kind: Placement
+metadata:
+  name: myapp-placement
+  namespace: openshift-gitops
+spec:
+  clusterSets:
+    - my-openshift-clusters
+  numberOfClusters: 3
+  predicates:
+    - requiredClusterSelector:
+        labelSelector:
+          matchLabels:
+            openshiftVersion: 4.19.21
