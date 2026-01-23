@@ -3,7 +3,11 @@ kind: Kustomization
 resources:
   - ../../base
   - pvc.yaml
+labels:
+  - pairs:
+      env: production
 patches:
+  # For production, the deployment consists of three replicas.
   - patch: |-
       apiVersion: apps/v1
       kind: Deployment
@@ -11,3 +15,12 @@ patches:
         name: myapp
       spec:
         replicas: 3
+  # The customization configures a secured route that uses an edge TLS termination.
+  - patch: |-
+      apiVersion: route.openshift.io/v1
+      kind: Route
+      metadata:
+        name: myapp
+      spec:
+        tls:
+          termination: edge

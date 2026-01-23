@@ -10,4 +10,4 @@ patches:
       metadata:
         name: myapp
       spec:
-        replicas: 2
+        replicas: 1
