@@ -2,8 +2,8 @@ apiVersion: kubevirt.io/v1
 kind: VirtualMachine
 metadata:
   name: fedora
-  annotations:
-    argocd.argoproj.io/sync-wave: "3"
+#  annotations:
+#    argocd.argoproj.io/sync-wave: "3"
 spec:
   dataVolumeTemplates:
     - metadata:
