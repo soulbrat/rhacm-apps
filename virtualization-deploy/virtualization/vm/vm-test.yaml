@@ -19,7 +19,7 @@ spec:
           resources:
             requests:
               storage: 10Gi
-          storageClassName: nfs-storage
+          storageClassName: ocs-storagecluster-ceph-rbd-virtualization
   instancetype:
     name: u1.small
   preference:
