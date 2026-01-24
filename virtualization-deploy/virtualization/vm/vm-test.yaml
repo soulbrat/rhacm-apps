@@ -2,8 +2,8 @@ apiVersion: kubevirt.io/v1
 kind: VirtualMachine
 metadata:
   name: fedora
-#  annotations:
-#    argocd.argoproj.io/sync-wave: "3"
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
 spec:
   dataVolumeTemplates:
     - metadata:
@@ -18,7 +18,7 @@ spec:
             - ReadWriteOnce
           resources:
             requests:
-              storage: 10Gi
+              storage: 40Gi
           storageClassName: ocs-storagecluster-ceph-rbd-virtualization
   instancetype:
     name: u1.small
