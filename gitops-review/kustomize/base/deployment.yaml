@@ -17,7 +17,8 @@ spec:
     spec:
       containers:
         - name: intranet-db
-          image: quay.io/redhattraining/mysql-80:1-251
+          #image: quay.io/redhattraining/mysql-80:1-251
+          image: quay.io/fedora/mysql-80
           envFrom:
             - secretRef:
                 name: intranet-db
