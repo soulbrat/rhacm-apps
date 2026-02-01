@@ -21,7 +21,7 @@ spec:
           envFrom:
             - secretRef:
                 name: intranet-db
-              #prefix: MYSQL_
+              prefix: MYSQL_
           resources:
             requests:
               cpu: 10m
