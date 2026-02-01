@@ -23,13 +23,13 @@ spec:
             - secretRef:
                 name: intranet-db
               prefix: MYSQL_
-          resources:
-            requests:
-              cpu: 10m
-              memory: 256Mi
-            limits:
-              cpu: "1"
-              memory: 512Mi
+#          resources:
+#            requests:
+#              cpu: 10m
+#              memory: 256Mi
+#            limits:
+#              cpu: "1"
+#              memory: 512Mi
           ports:
             - name: mysql
               containerPort: 3306
@@ -55,15 +55,15 @@ spec:
             - name: mysqldb
               mountPath: /var/lib/mysql
               subPath: data
-          securityContext:
-            capabilities:
-              drop:
-                - ALL
-            allowPrivilegeEscalation: false
-      securityContext:
-        runAsNonRoot: true
-        seccompProfile:
-          type: RuntimeDefault
+#          securityContext:
+#            capabilities:
+#              drop:
+#                - ALL
+#            allowPrivilegeEscalation: false
+#      securityContext:
+#        runAsNonRoot: true
+#        seccompProfile:
+#          type: RuntimeDefault
       volumes:
         - name: mysqldb
           persistentVolumeClaim:
