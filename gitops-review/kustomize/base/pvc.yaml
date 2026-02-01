@@ -8,7 +8,8 @@ metadata:
 spec:
   accessModes:
     - ReadWriteOnce
-  storageClassName: nfs-storage
+  #storageClassName: nfs-storage
+  storageClassName: kubevirt-csi-infra-default
   resources:
     requests:
       storage: 500Mi
