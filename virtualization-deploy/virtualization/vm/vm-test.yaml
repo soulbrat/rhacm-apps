@@ -33,7 +33,7 @@ spec:
       domain:
         devices:
           autoattachPodInterface: false
-          disks: []
+          #disks: []
           interfaces:
             - masquerade: {}
               name: default
