@@ -39,7 +39,7 @@ spec:
 #                - -i
 #                - -c
 #                - MYSQL_PWD="$MYSQL_PASSWORD" mysqladmin -u $MYSQL_USER ping
-#            initialDelaySeconds: 120
+#            initialDelaySeconds: 120 # init takes 4-5 min
 #            timeoutSeconds: 1
 #          readinessProbe:
 #            exec:
@@ -48,7 +48,7 @@ spec:
 #                - -i
 #                - -c
 #                - MYSQL_PWD="$MYSQL_PASSWORD" mysqladmin -u $MYSQL_USER ping
-#            initialDelaySeconds: 120
+#            initialDelaySeconds: 120 # init takes 4-5 min
 #            timeoutSeconds: 1
           volumeMounts:
             - name: mysqldb
