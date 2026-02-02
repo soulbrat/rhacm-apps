@@ -18,7 +18,7 @@ spec:
       containers:
         - name: intranet-db
           #image: quay.io/redhattraining/mysql-80:1-251
-          image: quay.io/fedora/mysql-80
+          image: quay.io/bitnami/mysql:8.0
           envFrom:
             - secretRef:
                 name: intranet-db
@@ -54,7 +54,7 @@ spec:
           volumeMounts:
             - name: mysqldb
               mountPath: /var/lib/mysql
-              subPath: data
+#              subPath: data
 #          securityContext:
 #            capabilities:
 #              drop:
